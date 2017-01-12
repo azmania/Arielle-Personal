@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Arielle
+ * Thurs. Jan. 12, 2017.
+ * Version 1.0
+ * Hero Database. 
+-->
+
+
+<heroes>
+    <females>
+        <hero>
+            <name>Storm</name>
+            <power>weather</power>
+            <type>mutant</type>
+        </hero>
+    </females>
+    
+</heroes>
