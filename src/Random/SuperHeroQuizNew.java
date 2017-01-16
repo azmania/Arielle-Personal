@@ -77,6 +77,11 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
         jLabelQuestion.setText("Question 1:");
 
         jToggleButtonContinue.setText("Continue");
+        jToggleButtonContinue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButtonContinueActionPerformed(evt);
+            }
+        });
 
         jRadioButtonA.setText("A");
 
@@ -154,6 +159,16 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
                 + "\nC) It doesn't matter. Gender does't define a hero."
                 + "\nD) I don't really care");
     }//GEN-LAST:event_jTextFieldQuestionActionPerformed
+
+    private void jToggleButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonContinueActionPerformed
+        //Variables
+        int count = 0;
+        
+        count++;
+        
+        //Question Number
+        jLabelQuestion.setText("Question " + count + ":");
+    }//GEN-LAST:event_jToggleButtonContinueActionPerformed
 
     /**
      * @param args the command line arguments
