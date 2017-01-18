@@ -16,6 +16,12 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
      */
     public SuperHeroQuizNew() {
         initComponents();
+        //Question 1
+        jTextFieldQuestion.setText("Are you:"
+                + "\nA) A female hero "
+                + "\nB) A male hero"
+                + "\nC) It doesn't matter. Gender does't define a hero."
+                + "\nD) I don't really care");
     }
 
     /**
@@ -152,12 +158,7 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldQuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuestionActionPerformed
-        //Question 1
-        jTextFieldQuestion.setText("Are you:"
-                + "\nA) A female hero "
-                + "\nB) A male hero"
-                + "\nC) It doesn't matter. Gender does't define a hero."
-                + "\nD) I don't really care");
+        
     }//GEN-LAST:event_jTextFieldQuestionActionPerformed
 
     private void jToggleButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonContinueActionPerformed

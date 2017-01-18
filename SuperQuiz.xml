@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<questions>
+    <question>
+        <asked>Are you: </asked>
+        <answers>
+            <a>A female hero</a>
+            <b>A male hero</b>
+            <c>It doesn't matter. Gender does't define a hero.</c>
+            <d>I don't really care</d>
+        </answers>
+    </question>
+</questions>
