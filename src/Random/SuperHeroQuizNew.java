@@ -5,23 +5,39 @@
  */
 package Random;
 
+import java.io.File;
+import nu.xom.Builder;
+import nu.xom.Document;
+import nu.xom.Element;
+import nu.xom.Elements;
+
 /**
  *
  * @author 1ainabeari
  */
 public class SuperHeroQuizNew extends javax.swing.JFrame {
-
+    Document doc;
+    Element questions; 
+    Elements questionData = null;
+    int questionNum;
     /**
      * Creates new form SuperHeroQuizNew
      */
     public SuperHeroQuizNew() {
         initComponents();
-        //Question 1
-        jTextFieldQuestion.setText("Are you:"
-                + "\nA) A female hero "
-                + "\nB) A male hero"
-                + "\nC) It doesn't matter. Gender does't define a hero."
-                + "\nD) I don't really care");
+        File file = new File("SuperQuiz.xml");
+        questionNum = 1; 
+
+        Builder builder = new Builder();
+        try {
+            doc = builder.build(file);
+            questions = doc.getRootElement();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        //Get Elements
+        questionData = questions.getChildElements();
     }
 
     /**
@@ -33,16 +49,25 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelC1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanelTop = new javax.swing.JPanel();
         jLabelTitle = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jTextFieldQuestion = new javax.swing.JTextField();
         jLabelQuestion = new javax.swing.JLabel();
         jToggleButtonContinue = new javax.swing.JToggleButton();
         jRadioButtonA = new javax.swing.JRadioButton();
         jRadioButtonC = new javax.swing.JRadioButton();
         jRadioButtonB = new javax.swing.JRadioButton();
         jRadioButtonD = new javax.swing.JRadioButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaQuestion = new javax.swing.JTextArea();
+        jLabelA = new javax.swing.JLabel();
+        jLabelB = new javax.swing.JLabel();
+        jLabelC = new javax.swing.JLabel();
+        jLabelD = new javax.swing.JLabel();
+
+        jLabelC1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,7 +84,7 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
             .addGroup(jPanelTopLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelTitle)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         jPanelTopLayout.setVerticalGroup(
             jPanelTopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,13 +95,6 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
         );
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 255));
-
-        jTextFieldQuestion.setText(" ");
-        jTextFieldQuestion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldQuestionActionPerformed(evt);
-            }
-        });
 
         jLabelQuestion.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
         jLabelQuestion.setForeground(new java.awt.Color(255, 0, 0));
@@ -89,37 +107,72 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(jRadioButtonA);
         jRadioButtonA.setText("A");
 
+        buttonGroup1.add(jRadioButtonC);
         jRadioButtonC.setText("C");
 
+        buttonGroup1.add(jRadioButtonB);
         jRadioButtonB.setText("B");
 
+        buttonGroup1.add(jRadioButtonD);
         jRadioButtonD.setText("D");
+
+        jTextAreaQuestion.setColumns(20);
+        jTextAreaQuestion.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaQuestion);
+
+        jLabelA.setText(" ");
+
+        jLabelB.setText(" ");
+
+        jLabelC.setText(" ");
+
+        jLabelD.setText(" ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jToggleButtonContinue)
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabelQuestion)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButtonA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jRadioButtonB)
-                        .addGap(46, 46, 46)
-                        .addComponent(jRadioButtonC)
-                        .addGap(45, 45, 45)
-                        .addComponent(jRadioButtonD))
-                    .addComponent(jTextFieldQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabelQuestion)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonB)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelB))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonA)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelA)))
+                        .addGap(39, 39, 39)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(274, 274, 274)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonD)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelD))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButtonC)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabelC)))
+                        .addContainerGap(213, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,14 +180,20 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelQuestion)
-                    .addComponent(jTextFieldQuestion, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButtonD)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonC)
+                    .addComponent(jRadioButtonA)
+                    .addComponent(jLabelA)
+                    .addComponent(jLabelC))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonB)
-                    .addComponent(jRadioButtonA))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                    .addComponent(jRadioButtonD)
+                    .addComponent(jLabelB)
+                    .addComponent(jLabelD))
+                .addGap(29, 29, 29)
                 .addComponent(jToggleButtonContinue)
                 .addContainerGap())
         );
@@ -150,25 +209,31 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelTop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldQuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldQuestionActionPerformed
-        
-    }//GEN-LAST:event_jTextFieldQuestionActionPerformed
-
     private void jToggleButtonContinueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonContinueActionPerformed
-        //Variables
-        int count = 0;
+        //aSSESSING
+        switch (questionNum){
+            case 1:
+                if (jRadioButtonA.isSelected()){ 
+                    
+                }
+                    
+          
+        } 
         
-        count++;
+        //Variables
+        questionNum++;
         
         //Question Number
-        jLabelQuestion.setText("Question " + count + ":");
+        jLabelQuestion.setText("Question " + questionNum + ":");
+
+        getQuestion();
     }//GEN-LAST:event_jToggleButtonContinueActionPerformed
 
     /**
@@ -205,8 +270,33 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void getQuestion() {
+        String question;
+        String a, b, c, d;
+        //Set Question
+        question = questionData.get((questionNum - 1)).getFirstChildElement("asked").getValue();
+        jTextAreaQuestion.setText(question);
+
+        //Set questions multiple choice
+        a = questionData.get((questionNum - 1)).getFirstChildElement("answers").getFirstChildElement("a").getValue();
+        b = questionData.get((questionNum - 1)).getFirstChildElement("answers").getFirstChildElement("b").getValue();
+        c = questionData.get((questionNum - 1)).getFirstChildElement("answers").getFirstChildElement("c").getValue();
+        d = questionData.get((questionNum - 1)).getFirstChildElement("answers").getFirstChildElement("d").getValue();
+
+        jLabelA.setText(a);
+        jLabelB.setText(b);
+        jLabelC.setText(c);
+        jLabelD.setText(d);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabelA;
+    private javax.swing.JLabel jLabelB;
+    private javax.swing.JLabel jLabelC;
+    private javax.swing.JLabel jLabelC1;
+    private javax.swing.JLabel jLabelD;
     private javax.swing.JLabel jLabelQuestion;
     private javax.swing.JLabel jLabelTitle;
     private javax.swing.JPanel jPanel1;
@@ -215,7 +305,8 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonB;
     private javax.swing.JRadioButton jRadioButtonC;
     private javax.swing.JRadioButton jRadioButtonD;
-    private javax.swing.JTextField jTextFieldQuestion;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaQuestion;
     private javax.swing.JToggleButton jToggleButtonContinue;
     // End of variables declaration//GEN-END:variables
 }

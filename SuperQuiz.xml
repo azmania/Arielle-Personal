@@ -7,7 +7,7 @@ and open the template in the editor.
 
 
 <questions>
-    <question>
+    <questionG>
         <asked>Are you: </asked>
         <answers>
             <a>A female hero</a>
@@ -15,5 +15,41 @@ and open the template in the editor.
             <c>It doesn't matter. Gender does't define a hero.</c>
             <d>I don't really care</d>
         </answers>
-    </question>
+    </questionG>
+    <questionH>
+        <asked>How are you today?</asked>
+        <answers>
+            <a>Horrible</a>
+            <b>Fine thank you</b>
+            <c>What's it to you?</c>
+            <d>Great! Today my fave movie came out and it was (rambles on)</d>
+        </answers>
+    </questionH>
+    <questionT>
+        <asked>Do you like to work in a team?</asked>
+        <answers>
+            <a>Yes! It would be so much fun!</a>
+            <b>Many hands make light work.</b>
+            <c>I prefer solo, but I may have a sidekick here and there...</c>
+            <d>Maybe if the government recruits me for money or like a sucide squad or something</d>
+        </answers>
+    </questionT>
+    <questionC>
+        <asked>What colour do you want your costume to be?</asked>
+        <answers>
+            <a>Bright! Bold! Inspiring! </a>
+            <b>Anything but spandex.</b>
+            <c>Dark, like the endelss pit where my soul used to be.</c>
+            <d>A smart material that doubles as flame resistant, camoflauge and free wifi</d>
+        </answers>
+    </questionC>
+    <questionTV>
+        <asked>What is your favourite show?</asked>
+        <answers>
+            <a>Superwholockkkkkkkkkkkkkkkkkkkkkkkkk</a>
+            <b>Greys Anatomy</b>
+            <c>Spongebob!</c>
+            <d>Vampire Diaries</d>
+        </answers>
+    </questionTV>
 </questions>
