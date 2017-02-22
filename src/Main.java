@@ -1,5 +1,6 @@
 
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -9,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author 1ainabeari
+ * @author A & J
  */
 public class Main {
 
@@ -19,30 +20,72 @@ public class Main {
     public static void main(String[] args) {
         //Scanner
         Scanner input = new Scanner (System.in);
-        // Variables
-        int w = 0;
-        String n;
         
-        //Processing
-        while (input.hasNext()){
-            n = input.nextLine();
-            if (n.equals("W")){
-                w += 1;
+        //Variables
+        int sum = 0;
+        
+        StringTokenizer str = new StringTokenizer (input.nextLine());
+        //Looping
+       
+        int[] rows1 = new int[4];
+        int[] rows2 = new int[4];  
+        int[] rows3 = new int[4];  
+        int[] rows4 = new int[4];  
+        int i = 0;
+            while (str.hasMoreTokens()){
+                
+                i++;
+                rows1[i] += Integer.parseInt(str.nextToken()); 
+                sum += rows1[i];
             }
-        }
         
-        if (w >= 5){
-            System.out.println("1");
-        }
-        else if (w >= 3){
-            System.out.println("2");
-        }
-        else if (w >= 1){
-            System.out.println("3");
-        }
-        else {
-            System.out.println("-1");
-        }
+            str = new StringTokenizer (input.nextLine());
+            int sum2 = 0;
+            i = 0;
+            while (str.hasMoreTokens()){
+                i++;
+                rows2[i] = Integer.parseInt(str.nextToken());
+                sum2 += rows2[i]; 
+            }
+            if (sum != sum2){
+                System.out.println("not magic");
+                
+            }
+            
+            str = new StringTokenizer (input.nextLine());
+            int sum3 = 0;
+            int j = 0;
+            while (str.hasMoreTokens()){
+                j++;
+                rows3[j] = Integer.parseInt(str.nextToken());
+                sum3 += rows3[j]; 
+            }
+            if (sum != sum3){
+                System.out.println("not magic");
+                
+            }
+            
+            str = new StringTokenizer (input.nextLine());
+            int sum4 = 0;
+            i = 0;
+            while (str.hasMoreTokens()){
+                i++;
+                rows4[i] = Integer.parseInt(str.nextToken());
+                sum4 += rows4[i]; 
+            }
+            if (sum != sum4){
+                System.out.println("not magic");
+                
+            }
+            int sum5 = 0;
+            for (int k = 0; k < rows1.length; k++){
+               sum5 = rows1[k] + rows2[k] + rows3[k] + rows4[k];
+               if (sum != sum5){
+                   System.out.println("not magic");
+               }
+            }
+           
+            System.out.println("magic");
     }
     
 }
