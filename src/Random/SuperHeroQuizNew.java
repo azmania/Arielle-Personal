@@ -34,7 +34,7 @@ public class SuperHeroQuizNew extends javax.swing.JFrame {
             questions = doc.getRootElement();
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } 
         
         //Get Elements
         questionData = questions.getChildElements();
