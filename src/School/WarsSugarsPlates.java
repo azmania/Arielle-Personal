@@ -47,8 +47,6 @@ public class WarsSugarsPlates {
 
     }
     public static void play(int choice, Scanner input){
-         //Variables
-        choice = 0;
         // Gettting xml and converting to useable doc
 
         File file = new File("src/School/WarsSugarDoc.xml");
