@@ -15,10 +15,10 @@ public class Main2 {
      */
     public static void main(String[] args) {
         // Scanner
-        Scanner input = new Scanner (System.in);
-        
-        //Variables
-        String
+//        Scanner input = new Scanner (System.in);
+//        
+//        //Variables
+//        String
     }
     
 }
