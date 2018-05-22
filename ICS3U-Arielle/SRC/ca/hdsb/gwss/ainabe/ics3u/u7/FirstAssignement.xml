@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This XML file states the characters in my book, what side they are on and what they're searities are. 
+-->
+
+
+<story>
+    <characters> 
+        <name>Tanya
+            <side>Avengelis
+                <serarity>Super Speed</serarity> 
+            </side>       
+        </name>
+
+    </characters>
+    <characters>
+        <name>Will
+            <side>Avengelis
+                <serarity>Fortune Telling</serarity>
+            </side>
+        </name>
+    </characters>
+    <characters>
+        <name>Chloe
+            <side>Serentis
+                <serarity>None (so far...)</serarity>
+            </side>
+        </name>
+    </characters>      
+    
+</story>

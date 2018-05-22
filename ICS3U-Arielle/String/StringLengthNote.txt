@@ -1,0 +1,32 @@
+public String missingChar(String str, int n) {
+  String front = str.substring(0, n);
+  
+  // Start this substring at n+1 to omit the char.
+  // Can also be shortened to just str.substring(n+1)
+  // which goes through the end of the string.
+  String back = str.substring(n+1, str.length());
+  
+  return front + back;
+}
+
+public String startOz(String str) {
+  String result = "";
+  
+  if (str.length() >= 1 && str.charAt(0)=='o') {
+    result = result + str.charAt(0);
+  }
+  
+  if (str.length() >= 2 && str.charAt(1)=='z') {
+    result = result + str.charAt(1);
+  }
+  
+  return result;
+}
+
+public String delDel(String str) {
+  String answer = str;
+  if (str.length() >= 4 && str.substring(1,4).equals("del")) {
+    answer = str.substring(0,1) + str.substring(4,str.length());
+  } 
+  return answer;
+}

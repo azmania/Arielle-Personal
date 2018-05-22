@@ -1,0 +1,65 @@
+<friends>
+    <friend>
+        <name>Percy Jackson</name>
+        <address>Camp Half Blood, Long Island</address>
+        <instagram>@seeweedbrain</instagram>
+        <job>Monster Slayer/ Hero</job>
+        <type>HalfBlood/ Demigod</type>
+    </friend>
+    <friend>
+        <name>John Smith</name>
+        <address>Earth</address>
+        <instagram>@john.smith</instagram>
+        <job>The Protector of Earth by day, the Doctor by night</job>
+        <type>Alien - Lorien</type>
+    </friend>
+    <friend>
+        <name>Natasha Rominoff</name>
+        <address>CLASSIFIED</address>
+        <instagram>CLASSIFIED</instagram>
+        <job>CLASSIFIED</job>
+        <type>CLASSIFIED</type>
+    </friend>
+    <friend>
+        <name>Ellie Xu</name>
+        <address>IDK, Oakville, ON</address>
+        <instagram>@bob.builder</instagram>
+        <job>Something crazy</job>
+        <type>human (I think)</type>
+    </friend>
+    <friend>
+        <name>Mr. Muir</name>
+        <address>5323 Westoak</address>
+        <instagram>Wm.Muir</instagram>
+        <job>Teacher</job>
+        <type>Human Hybrid</type>
+    </friend>
+    <friend>
+        <name>Ishmam</name>
+        <address>IDK</address>
+        <instagram>cinnominbubble</instagram>
+        <job>Cosplayer (Secretly a mermaid fish princess)</job>
+        <type>Mermaid </type>
+    </friend>
+    <friend>
+        <name>Chevron Savano</name>
+        <address>California, US</address>
+        <instagram>@notTraitorChevie</instagram>
+        <job>FBI Special Agent</job>
+        <type>Human</type>
+    </friend>
+    <friend>
+        <name>Tony Stark</name>
+        <address>New York City, New York State, US</address>
+        <instagram>@iamironman</instagram>
+        <job>Business Guy, engineer, avenger, etc.</job>
+        <type>Human (without a heart, for real)</type>
+    </friend>
+    <friend>
+        <name>Esha Prasad</name>
+        <address>Oakville, ON</address>
+        <instagram>@moony.bones</instagram>
+        <job>Very Special Head of Complaints</job>
+        <type>Vampire</type>
+    </friend>
+<friend><name>The Doctor</name><address>TARDIS</address><instagram>@GALIFREY</instagram><job>Traveller</job><type>Time Lord/Gallifreyen/two hearted humanoid</type></friend></friends>

@@ -1,0 +1,7 @@
+<animal>
+		<animalName>Moose</animalName>
+		<animalClass>Mammalia</animalClass>
+		<habitat>North America</habitat>
+		<diet>Herbivore</diet>
+		<flying>No</flying>
+	</animal>

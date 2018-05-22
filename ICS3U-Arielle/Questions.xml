@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Arielle
+ * Mon. Jan. 16, 2017.
+ * Version 1.0
+ * Multiple Choice Questions. 
+-->
+
+
+<Questions>
+    <question>
+        <asked>What is the advantage of a switch statement over an if statement?</asked>
+        <answers>
+            <a>It looks neater</a>
+            <b>It is better for comparing two paths</b>
+            <c>It is better for comparing more that two paths</c>
+            <d>A and C.</d>
+        </answers>
+        <correctAns>d</correctAns>
+    </question>
+    <question>
+        <asked>Java is an object oriented programming language. What are the only things in Java that are not objects?</asked>
+        <answers>
+            <a>Strings</a>
+            <b>System.out.println</b>
+            <c>Primitive Data Types</c>
+            <d>Methods</d>
+        </answers>
+        <correctAns>c</correctAns>
+    </question>
+    <question>
+        <asked>What is the difference between procedure and function methods?</asked>
+        <answers>
+            <a>Functions are methods that involve math</a>
+            <b>Functions require a return statement</b>
+            <c>Procedures must have a set start and end</c>
+            <d>Procedures require a return statement</d>
+        </answers>
+        <correctAns>b</correctAns>
+    </question>
+    <question>
+        <asked>What is the post incriment in this loop statement: for (int i = 0; i &lt; 10; i++){}</asked>
+        <answers>
+            <a>i++</a>
+            <b>0</b>
+            <c>10</c>
+            <d>There is no post increment in this loop.</d>
+        </answers>
+        <correctAns>a</correctAns>
+    </question>
+    <question>
+        <asked>Who first propoesed Binary in 1945?</asked>
+        <answers>
+            <a>James Gosling</a>
+            <b>Ryan Gosling</b>
+            <c>Victor Von Doom</c>
+            <d>John von Neuman</d>
+        </answers>
+        <correctAns>d</correctAns>
+    </question>
+    <question>
+        <asked>What 1010 (Binary) in base 10 data representation?</asked>
+        <answers>
+            <a>10</a>
+            <b>11</b>
+            <c>24</c>
+            <d>13</d>
+        </answers>
+        <correctAns>a</correctAns>
+    </question>
+    <question>
+        <asked>What is the best case scenario for linear search?</asked>
+        <answers>
+            <a>1</a>
+            <b>n/2</b>
+            <c>0</c>
+            <d>n</d>
+        </answers>
+        <correctAns>c</correctAns>
+    </question>
+</Questions>
